@@ -1,4 +1,4 @@
-@@if ($items)
+@if ($items)
     <div class="row">
         @foreach ($items as $item)
             <div class="item">
@@ -10,7 +10,9 @@
                         <div class="panel-body">
                             <p class="item-title"><a href="#">{{ $item->name }}</a></p>
                             <div class="buttons text-center">
-                                @include('items.want_button', ['item' => $item])
+                                @if (Auth::check())
+                                    @include('items.want_button', ['item' => $item])
+                                @endif
                             </div>
                         </div>
                     </div>
