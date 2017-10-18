@@ -1,6 +1,7 @@
 @if ($items)
     <div class="row">
         @foreach ($items as $item)
+            @if (Auth::user()->is_wanting($item->code) or Auth::user()->is_haveing($item->code))
             <div class="item">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="panel panel-default">
@@ -26,6 +27,7 @@
                     </div>
                 </div>
             </div>
+            @endif
         @endforeach
     </div>
 @endif
