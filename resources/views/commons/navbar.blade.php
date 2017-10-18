@@ -19,6 +19,12 @@
                                 アイテムを追加
                             </a>
                         </li>
+                        
+                        @if (isset($item->count))
+                            <div class="panel-footer">
+                                <p class="text-center">{{ $key+1 }}位: {{ $item->count}} Wants</p>
+                            </div>
+                        @endif
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
