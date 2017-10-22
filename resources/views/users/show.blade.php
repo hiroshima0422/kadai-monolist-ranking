@@ -25,6 +25,6 @@
             </ul>
         </div>
     </div>
-    @include('items.items', ['items' => $items])
+    @include('items.items_user', ['items' => $items])
     {!! $items->render() !!}
 @endsection

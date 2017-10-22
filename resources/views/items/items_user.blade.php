@@ -16,10 +16,10 @@
                             @endif
                             <div class="buttons text-center">
                                 @if (Auth::check())
-                                     @if (!Auth::user()->is_wanting($item->code) or !Auth::user()->is_haveing($item->code)) 
+                                     
                                         @include('items.want_button', ['item' => $item])
                                         @include('items.have_button', ['item' => $item])
-                                    @endif
+                                    
                                 @endif
                             </div>
                         </div>
